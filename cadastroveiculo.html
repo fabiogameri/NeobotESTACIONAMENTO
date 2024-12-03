@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Adicionar Veículo</title>
+    <link rel="stylesheet" href="css/style_cadastro.css">
+</head>
+<body>
+    <div class="form-container">
+        <h1>Adicionar Veículo</h1>
+        <form method="post" action="php/processocadastro.php">
+            <label for="pessoa">Pessoa:</label>
+            <input type="text" id="pessoa" name="pessoa" maxlength="50" required
+                pattern="[A-Za-zÀ-ÖØ-öø-ÿ\s]+" title="Somente letras e espaços.">
+
+            <label for="marca">Marca:</label>
+            <input type="text" id="marca" name="marca" maxlength="20" required 
+                pattern="[A-Za-z0-9 ]+" title="Somente letras, números e espaços.">
+
+            <label for="modelo">Modelo:</label>
+            <input type="text" id="modelo" name="modelo" maxlength="30" required 
+                pattern="[A-Za-z0-9 ]+" title="Somente letras, números e espaços.">
+
+            <label for="ano">Ano:</label>
+            <input type="number" id="ano" name="ano" min="1900" max="2099" required
+                pattern="\d{4}" title="Digite um ano válido de 4 dígitos.">
+
+            <label for="cor">Cor:</label>
+            <input type="text" id="cor" name="cor" maxlength="20" required 
+                pattern="[A-Za-z ]+" title="Somente letras e espaços.">
+
+            <label for="mes" class="mes-label">Mês:</label>
+            <select id="mes" name="mes" required>
+                <option value="1">Janeiro</option>
+                <option value="2">Fevereiro</option>
+                <option value="3">Março</option>
+                <option value="4">Abril</option>
+                <option value="5">Maio</option>
+                <option value="6">Junho</option>
+                <option value="7">Julho</option>
+                <option value="8">Agosto</option>
+                <option value="9">Setembro</option>
+                <option value="10">Outubro</option>
+                <option value="11">Novembro</option>
+                <option value="12">Dezembro</option>
+            </select>
+
+            <label for="dia">Dia:</label>
+            <input type="number" id="dia" name="dia" min="1" max="31" required title="Digite um número entre 1 e 31.">
+
+            <button type="submit">Salvar</button>
+        </form>
+
+        <button onclick="window.location.href='index.html'">Voltar ao Menu</button>
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estacionamento da Néia</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <header>
+        <h1>Estacionamento da Néia</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="cadastroveiculo.html">Cadastro de veículos</a></li>
+            <li><a href="php/gerenciarveiculos.php">Gerenciar veículos</a></li>
+            <li><a href="php/listarveiculos.php">Listar veículos</a></li>
+        </ul>
+    </nav>
+    <main>
+        <h2>Últimas Adições</h2>
+        <ul id="veiculos-list" class="veiculos-list"></ul>
+    </main>
+    <script>
+        fetch('php/ult_adicoes.php')
+            .then(response => response.json())
+            .then(data => {
+                const listaVeiculos = document.getElementById('veiculos-list');
+                data.forEach(veiculo => {
+                    const item = document.createElement('li');
+                    item.className = 'veiculo-item';
+                    item.innerHTML = `
+                        <strong>${veiculo.pessoa}</strong> - ${veiculo.marca}, ${veiculo.modelo}, ${veiculo.ano}, ${veiculo.cor}
+                    `;
+                    listaVeiculos.appendChild(item);
+                });
+            })
+            .catch(error => console.error('Erro ao buscar os dados:', error));
+    </script>
+</body>
+</html>

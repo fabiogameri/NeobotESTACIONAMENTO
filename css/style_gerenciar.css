@@ -1,0 +1,151 @@
+/* Reseta margens e fontes básicas */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f3f4f6;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+}
+
+h1 {
+    font-size: 2rem;
+    color: #2c3e50;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* Botão de Voltar */
+.btn-voltar {
+    display: inline-block;
+    padding: 10px 20px;
+    margin-bottom: 20px;
+    background-color: #2f72c0;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+.btn-voltar:hover {
+    background-color: #2f72c0;
+}
+
+/* Estilo da Tabela */
+table {
+    width: 100%;
+    max-width: 1000px;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+    border-bottom: 1px solid #e5e5e5;
+}
+
+th {
+    background-color: #2f72c0;
+    color: white;
+    font-weight: 600;
+}
+
+td {
+    color: #2c3e50;
+}
+
+tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* Alinhamento dos Formulários e Botões */
+form {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    margin-bottom: 10px;
+}
+
+input[type="text"],
+input[type="number"] {
+    padding: 6px 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 0.9rem;
+}
+
+/* Botão de Salvar */
+.btn-salvar {
+    padding: 8px 14px;
+    background-color: #27ae60;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+}
+
+.btn-salvar:hover {
+    background-color: #2ecc71;
+}
+
+/* Botão de Excluir com mais ênfase */
+.btn-excluir {
+    padding: 8px 14px;
+    background-color: #e74c3c;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    text-decoration: none;
+    transition: background-color 0.3s;
+}
+
+.btn-excluir:hover {
+    background-color: #c0392b;
+}
+
+/* Botão Editar */
+.btn-editar {
+    padding: 8px 14px;
+    background-color: #2f72c0;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 0.9rem;
+    transition: background-color 0.3s;
+    margin-right: 10px;
+}
+
+.btn-editar:hover {
+    background-color: #2980b9;
+}
+
+/* Melhorando o layout das ações */
+.actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+/* Formulário de Edição Oculto */
+form[style*="display: none;"] {
+    margin-top: 10px;
+}
